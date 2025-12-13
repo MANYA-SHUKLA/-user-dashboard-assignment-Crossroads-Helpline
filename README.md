@@ -39,7 +39,6 @@ user-dashboard/
 │   │   │   └── Dashboard.tsx
 │   │   ├── Layout/
 │   │   │   └── Footer.tsx
-│   │   ├── UI/
 │   │   ├── UserForm/
 │   │   │   └── UserForm.tsx
 │   │   └── UserTable/
@@ -54,7 +53,6 @@ user-dashboard/
 │   │   └── main.css
 │   ├── types/
 │   │   └── user.ts
-│   ├── utils/
 │   ├── App.css
 │   ├── App.tsx
 │   ├── index.css
