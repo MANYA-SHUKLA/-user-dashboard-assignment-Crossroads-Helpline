@@ -374,9 +374,28 @@
     height: 48px;
   }
   
-  .stat-icon svg {
-    width: 20px;
-    height: 20px;
+  .modal-overlay {
+    padding: 5px;
+  }
+  
+  .modal-content {
+    padding: 16px;
+    border-radius: 16px;
+  }
+  
+  .input-field {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+}
+
+@media (max-width: 640px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .stat-card {
+    padding: 20px;
   }
 }
 
@@ -477,15 +496,17 @@
   z-index: 1000;
   backdrop-filter: blur(4px);
   animation: fadeIn 0.3s ease-out;
-  padding: 20px;
+  padding: 10px;
 }
 
 .modal-content {
   background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
   border-radius: 20px;
-  padding: 30px;
+  padding: 20px;
   width: 100%;
   max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
   animation: slideUp 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
 }
