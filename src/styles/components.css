@@ -199,7 +199,7 @@
 }
 .table-wrapper {
   border-radius: 16px;
-  overflow: hidden;
+  overflow-x: auto;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   margin-top: 24px;
   animation: fadeIn 0.6s ease-out;
@@ -214,6 +214,7 @@
   border-collapse: separate;
   border-spacing: 0;
   background: white;
+  min-width: 600px;
 }
 
 .dark-mode .data-table {
@@ -342,6 +343,26 @@
   background: linear-gradient(135deg, #64748b 0%, #475569 100%);
   color: white;
 }
+@media (max-width: 480px) {
+  .dashboard-title {
+    font-size: 24px;
+  }
+  
+  .stat-value {
+    font-size: 28px;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 @media (max-width: 768px) {
   .stats-grid {
     grid-template-columns: 1fr;
@@ -365,6 +386,11 @@
   
   .table-wrapper {
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .data-table {
+    min-width: 600px;
   }
 }
 @keyframes fadeIn {

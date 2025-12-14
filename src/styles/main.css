@@ -245,6 +245,22 @@ body.dark-mode {
   color: #0ea5e9;
   transform: translateY(-3px);
 }
+@media (max-width: 480px) {
+  .container {
+    padding: 0 10px;
+  }
+  
+  .app-header h1 {
+    font-size: 20px;
+  }
+  
+  .modal-content {
+    padding: 16px;
+    margin: 5px;
+    width: calc(100% - 10px);
+  }
+}
+
 @media (max-width: 768px) {
   .container {
     padding: 0 15px;
@@ -258,6 +274,28 @@ body.dark-mode {
   .data-table td {
     padding: 10px 12px;
     font-size: 14px;
+  }
+  
+  .header-content {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+  
+  .app-header h1 {
+    font-size: 24px;
+  }
+  
+  .app-header {
+    padding: 16px 0;
+    margin-bottom: 24px;
+  }
+  
+  .modal-content {
+    padding: 20px;
+    margin: 10px;
+    max-width: none;
+    width: calc(100% - 20px);
   }
 }
 .app-header {

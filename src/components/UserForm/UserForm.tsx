@@ -22,20 +22,6 @@ const UserForm: React.FC<UserFormProps> = ({ isOpen, onClose, user }) => {
   });
   const [errors, setErrors] = useState<Partial<UserFormData>>({});
 
-  useEffect(() => {
-    if (user) {
-      setFormData({
-        name: user.name,
-        email: user.email,
-        phone: user.phone,
-        website: user.website,
-        companyName: user.company.name
-      });
-    } else {
-      resetForm();
-    }
-  }, [user]);
-
   const resetForm = () => {
     setFormData({
       name: '',
@@ -46,6 +32,20 @@ const UserForm: React.FC<UserFormProps> = ({ isOpen, onClose, user }) => {
     });
     setErrors({});
   };
+
+  useEffect(() => {
+    if (user) {
+      setFormData({ // eslint-disable-line react-hooks/set-state-in-effect
+        name: user.name,
+        email: user.email,
+        phone: user.phone,
+        website: user.website,
+        companyName: user.company.name
+      });
+    } else {
+      resetForm();
+    }
+  }, [user]);
 
   const validateForm = (): boolean => {
     const newErrors: Partial<UserFormData> = {};
