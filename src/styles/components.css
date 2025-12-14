@@ -642,3 +642,52 @@
     white-space: normal;
   }
 }
+@media (max-width: 390px) {
+  .dashboard-title {
+    font-size: 18px;
+  }
+  .stat-value {
+    font-size: 20px;
+  }
+  .stat-label {
+    font-size: 12px;
+  }
+  .stat-icon {
+    width: 44px;
+    height: 44px;
+  }
+  .data-table th,
+  .data-table td {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 375px) {
+  .dashboard-title {
+    font-size: 16px;
+  }
+  .stat-value {
+    font-size: 18px;
+  }
+  .data-table th:nth-child(4),
+  .data-table td:nth-child(4) {
+    display: none !important;
+  }
+  .icon-btn {
+    width: 32px;
+    height: 32px;
+  }
+  .stat-card {
+    padding: 12px;
+  }
+}
+
+@media (min-width: 1366px) {
+  .stats-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+  .dashboard-title {
+    font-size: 30px;
+  }
+}
