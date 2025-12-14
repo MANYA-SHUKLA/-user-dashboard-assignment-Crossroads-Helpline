@@ -262,7 +262,7 @@
 }
 
 .data-table tbody tr:hover {
-  background: linear-gradient(90deg, rgba(14, 165, 233, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%);
+  background: linear-gradient(90deg, rgba(0, 165, 233, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%);
   transform: scale(1.005);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
@@ -615,4 +615,38 @@
 
 .dark-mode .modal-header .icon-btn:hover {
   background-color: #334155 !important;
+}
+/* Responsive utility helpers (small, safe replacements for Tailwind utilities used in components) */
+.hidden {
+  display: none !important;
+}
+/* Small screens (>= 640px) - show sm:table-cell */
+@media (min-width: 640px) {
+  .sm\:table-cell {
+    display: table-cell !important;
+  }
+}
+/* Medium screens (>= 768px) - show md:table-cell */
+@media (min-width: 768px) {
+  .md\:table-cell {
+    display: table-cell !important;
+  }
+}
+/* Large screens (>= 1024px) - show lg:table-cell */
+@media (min-width: 1024px) {
+  .lg\:table-cell {
+    display: table-cell !important;
+  }
+}
+/* Make sure table cells that are not hidden keep table-cell behavior */
+.data-table th,
+.data-table td {
+  white-space: nowrap;
+}
+/* Allow long content to wrap on small screens */
+@media (max-width: 640px) {
+  .data-table td,
+  .data-table th {
+    white-space: normal;
+  }
 }
