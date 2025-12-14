@@ -617,30 +617,25 @@
 }.hidden {
   display: none !important;
 }
-/* Small screens (>= 640px) - show sm:table-cell */
 @media (min-width: 640px) {
   .sm\:table-cell {
     display: table-cell !important;
   }
 }
-/* Medium screens (>= 768px) - show md:table-cell */
 @media (min-width: 768px) {
   .md\:table-cell {
     display: table-cell !important;
   }
 }
-/* Large screens (>= 1024px) - show lg:table-cell */
 @media (min-width: 1024px) {
   .lg\:table-cell {
     display: table-cell !important;
   }
 }
-/* Make sure table cells that are not hidden keep table-cell behavior */
 .data-table th,
 .data-table td {
   white-space: nowrap;
 }
-/* Allow long content to wrap on small screens */
 @media (max-width: 640px) {
   .data-table td,
   .data-table th {
