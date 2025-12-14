@@ -317,7 +317,7 @@ body.dark-mode {
   
   .btn {
     padding: 12px 20px;
-    min-height: 44px; /* Touch-friendly */
+    min-height: 44px;
   }
 }
 
