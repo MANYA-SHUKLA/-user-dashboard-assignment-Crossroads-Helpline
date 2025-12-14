@@ -42,8 +42,8 @@ const UserTable: React.FC<UserTableProps> = ({ users, onEdit }) => {
             <th>Name</th>
             <th>Email</th>
             <th>Phone</th>
-            <th className="hidden md:table-cell">Website</th>
-            <th className="hidden lg:table-cell">Company</th>
+            <th className="hidden sm:table-cell">Website</th>
+            <th className="hidden md:table-cell">Company</th>
             <th>Actions</th>
           </tr>
         </thead>
@@ -84,7 +84,7 @@ const UserTable: React.FC<UserTableProps> = ({ users, onEdit }) => {
                   </span>
                 </div>
               </td>
-              <td className="hidden md:table-cell">
+              <td className="hidden sm:table-cell">
                 <div style={{display: 'flex', alignItems: 'center', gap: '8px'}}>
                   <Globe size={14} />
                   <a 
@@ -102,7 +102,7 @@ const UserTable: React.FC<UserTableProps> = ({ users, onEdit }) => {
                   </a>
                 </div>
               </td>
-              <td className="hidden lg:table-cell">
+              <td className="hidden md:table-cell">
                 <span style={{
                   backgroundColor: 'rgba(14, 165, 233, 0.1)',
                   padding: '4px 12px',

@@ -122,6 +122,9 @@ const UserForm: React.FC<UserFormProps> = ({ isOpen, onClose, user }) => {
         onClick={e => e.stopPropagation()}
         style={{
           maxWidth: '500px',
+          width: '95%',
+          maxHeight: '90vh',
+          overflowY: 'auto',
           animation: 'slideUp 0.3s ease-out'
         }}
       >
@@ -313,6 +316,7 @@ const UserForm: React.FC<UserFormProps> = ({ isOpen, onClose, user }) => {
 
           <div style={{
             display: 'flex',
+            flexDirection: 'column',
             gap: '12px',
             marginTop: '32px',
             paddingTop: '20px',
@@ -321,7 +325,7 @@ const UserForm: React.FC<UserFormProps> = ({ isOpen, onClose, user }) => {
             <button
               type="submit"
               className="btn btn-primary"
-              style={{flex: 1}}
+              style={{width: '100%', minHeight: '44px'}}
             >
               <Save size={18} />
               {user ? 'Update User' : 'Create User'}
@@ -330,7 +334,7 @@ const UserForm: React.FC<UserFormProps> = ({ isOpen, onClose, user }) => {
               type="button"
               className="btn btn-secondary"
               onClick={onClose}
-              style={{flex: 1}}
+              style={{width: '100%', minHeight: '44px'}}
             >
               Cancel
             </button>
