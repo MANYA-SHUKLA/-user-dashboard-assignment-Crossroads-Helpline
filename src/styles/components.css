@@ -384,7 +384,7 @@
   }
   
   .input-field {
-    font-size: 16px; /* Prevents zoom on iOS */
+    font-size: 16px; 
   }
 }
 
@@ -482,7 +482,6 @@
 .table-row:nth-child(8) { animation-delay: 0.8s; }
 .table-row:nth-child(9) { animation-delay: 0.9s; }
 .table-row:nth-child(10) { animation-delay: 1s; }
-/* Modal Styles */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -615,9 +614,7 @@
 
 .dark-mode .modal-header .icon-btn:hover {
   background-color: #334155 !important;
-}
-/* Responsive utility helpers (small, safe replacements for Tailwind utilities used in components) */
-.hidden {
+}.hidden {
   display: none !important;
 }
 /* Small screens (>= 640px) - show sm:table-cell */
