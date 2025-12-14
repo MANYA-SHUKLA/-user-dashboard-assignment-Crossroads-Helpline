@@ -50,16 +50,16 @@ const UserTable: React.FC<UserTableProps> = ({ users, onEdit }) => {
         <tbody>
           {users.map((user) => (
             <tr key={user.id} className="table-row">
-              <td>
-                <span className="status-badge status-active">
-                  #{user.id}
-                </span>
-              </td>
+                <td data-label="ID">
+                  <span className="status-badge status-active">
+                    #{user.id}
+                  </span>
+                </td>
               <td>
                 <div style={{fontWeight: '600', color: 'inherit'}}>
                   {user.name}
                 </div>
-              </td>
+                </td>
               <td>
                 <div style={{display: 'flex', alignItems: 'center', gap: '8px'}}>
                   <Mail size={14} />
@@ -71,11 +71,12 @@ const UserTable: React.FC<UserTableProps> = ({ users, onEdit }) => {
                       transition: 'all 0.2s'
                     }}
                     className="email-link"
+                      data-label="Email"
                   >
                     {user.email}
                   </a>
                 </div>
-              </td>
+                </td>
               <td>
                 <div style={{display: 'flex', alignItems: 'center', gap: '8px'}}>
                   <Phone size={14} />
@@ -83,7 +84,8 @@ const UserTable: React.FC<UserTableProps> = ({ users, onEdit }) => {
                     {user.phone}
                   </span>
                 </div>
-              </td>
+                  <div className="mobile-label" style={{display: 'none'}} data-label="Phone" />
+                </td>
               <td className="hidden sm:table-cell">
                 <div style={{display: 'flex', alignItems: 'center', gap: '8px'}}>
                   <Globe size={14} />
@@ -97,13 +99,14 @@ const UserTable: React.FC<UserTableProps> = ({ users, onEdit }) => {
                       transition: 'all 0.2s'
                     }}
                     className="website-link"
+                      data-label="Website"
                   >
                     {user.website}
                   </a>
                 </div>
               </td>
               <td className="hidden md:table-cell">
-                <span style={{
+                  <span style={{
                   backgroundColor: 'rgba(14, 165, 233, 0.1)',
                   padding: '4px 12px',
                   borderRadius: '6px',
@@ -113,7 +116,7 @@ const UserTable: React.FC<UserTableProps> = ({ users, onEdit }) => {
                   {user.company.name}
                 </span>
               </td>
-              <td>
+                <td data-label="Actions">
                 <div className="action-icons">
                   <button
                     className="icon-btn icon-edit"
@@ -130,7 +133,7 @@ const UserTable: React.FC<UserTableProps> = ({ users, onEdit }) => {
                     <Trash2 size={16} />
                   </button>
                 </div>
-              </td>
+                </td>
             </tr>
           ))}
         </tbody>

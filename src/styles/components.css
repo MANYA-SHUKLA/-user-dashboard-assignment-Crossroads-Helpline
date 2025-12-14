@@ -388,6 +388,24 @@
   }
 }
 
+/* Footer responsiveness */
+@media (max-width: 480px) {
+  .social-links {
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .social-icon {
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 180px;
+  }
+}
+
 @media (max-width: 640px) {
   .stats-grid {
     grid-template-columns: 1fr;
@@ -396,6 +414,70 @@
   
   .stat-card {
     padding: 20px;
+  }
+}
+
+/* Responsive table -> stacked rows on small screens */
+@media (max-width: 640px) {
+  .data-table {
+    min-width: 0; /* allow table to shrink */
+  }
+
+  .data-table thead {
+    display: none;
+  }
+
+  .data-table tbody tr {
+    display: block;
+    margin-bottom: 14px;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  }
+
+  .dark-mode .data-table tbody tr {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+  }
+
+  .data-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 6px;
+    border-bottom: none;
+    background: transparent;
+  }
+
+  .data-table td + td {
+    margin-top: 6px;
+  }
+
+  .data-table td::before {
+    content: attr(data-label) ': ';
+    font-weight: 700;
+    color: #64748b;
+    margin-right: 8px;
+    flex: 0 0 auto;
+  }
+
+  .dark-mode .data-table td::before {
+    color: #94a3b8;
+  }
+
+  .data-table .action-icons {
+    justify-content: flex-end;
+    gap: 10px;
+  }
+
+  .data-table .company-tag {
+    display: inline-block;
+  }
+
+  .data-table td[data-label="ID"]::before {
+    color: inherit;
+    font-weight: 600;
   }
 }
 
