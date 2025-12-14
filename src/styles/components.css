@@ -416,11 +416,9 @@
     padding: 20px;
   }
 }
-
-/* Responsive table -> stacked rows on small screens */
 @media (max-width: 640px) {
   .data-table {
-    min-width: 0; /* allow table to shrink */
+    min-width: 0; 
   }
 
   .data-table thead {
